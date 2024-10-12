@@ -44,8 +44,6 @@
       ]
     ]
   },
-  "menus": ["qmk_rgb_matrix"],
-  "keycodes": ["qmk_lighting"],
   "lighting": "vialrgb",
   "vibl": true
 }
