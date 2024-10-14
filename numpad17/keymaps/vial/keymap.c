@@ -1,5 +1,20 @@
 #include QMK_KEYBOARD_H
 
+/*
+    ┌───┬───────────┬───┐
+    │MUT│   SCREEN  │NUM│
+    ├───┼───┬───┬───┼───┤
+    │TO0│ 7 │ 8 │ 9 │   │
+    ├───┼───┼───┼───┤PLS│
+    │TO1│ 4 │ 5 │ 6 │   │
+    ├───┼───┼───┼───┼───┤
+    │TO2│ 1 │ 2 │ 3 │   │
+    ├───┼───┴───┼───┤ENT│
+    │TO3│   0   │DOT│   │
+    └───┴───────┴───┴───┘
+*/
+
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT (
         KC_MUTE ,                             KC_NUM ,

@@ -1,14 +1,5 @@
 #include "quantum.h"
 
-void keyboard_post_init_user(void) {
-    // 初始化 OLED 显示
-    oled_init(OLED_ROTATION_0);
-    // 清除 OLED 显示
-    oled_clear();
-    // 显示 "Hello World"
-    oled_write_P(PSTR("Hello World"), false);
-}
-
 bool oled_task_user(void) {
     uint8_t charmax = oled_max_chars();
     char    line0[charmax + 1];

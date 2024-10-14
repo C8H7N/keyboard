@@ -4,6 +4,9 @@
   "maintainer": "HuaMo",
   "bootloader": "vibl",
   "diode_direction": "COL2ROW",
+  "build": {
+    "lto": true
+  },
   "features": {
     "extrakey": true,
     "mousekey": true,
