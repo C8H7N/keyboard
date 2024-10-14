@@ -1,23 +1,24 @@
 {
   "manufacturer": "HuaMo",
-  "keyboard_name": "creator_dock/17",
+  "keyboard_name": "Creator Dock NumPad17",
   "maintainer": "HuaMo",
   "bootloader": "vibl",
   "diode_direction": "COL2ROW",
   "features": {
-    "bootmagic": false,
     "extrakey": true,
     "mousekey": true,
     "nkro": true,
     "encoder": true,
-    "rgb_matrix": true
+    "rgb_matrix": true,
+    "unicode": true,
+    "oled": true
   },
   "matrix_pins": {
     "cols": ["B15", "B14", "B13", "B12", "A3"],
     "rows": ["B0", "A7", "A6", "A5", "A4"]
   },
   "processor": "STM32F103",
-  "url": "",
+  "url": "https://github.com/C8H7N/keyboard",
   "usb": {
     "device_version": "1.0.0",
     "pid": "0x0000",
@@ -29,8 +30,8 @@
   "layouts": {
     "LAYOUT": {
       "layout": [
-        { "label": "Encoder1", "matrix": [0, 0], "x": 0, "y": 0 },
-        { "label": "Encoder2", "matrix": [0, 4], "x": 4, "y": 0 },
+        { "label": "encoder1", "matrix": [0, 0], "x": 0, "y": 0 },
+        { "label": "encoder2", "matrix": [0, 4], "x": 4, "y": 0 },
 
         { "label": "key1", "matrix": [1, 0], "x": 0, "y": 1 },
         { "label": "key2", "matrix": [1, 1], "x": 1, "y": 1 },
@@ -57,8 +58,8 @@
   },
   "encoder": {
     "rotary": [
-      { "pin_a": "B3", "pin_b": "B4", "resolution": 2 },
-      { "pin_a": "A1", "pin_b": "A2", "resolution": 2 }
+      { "pin_a": "B3", "pin_b": "B4", "resolution": 4 },
+      { "pin_a": "A1", "pin_b": "A2", "resolution": 4 }
     ]
   },
   "ws2812": {
@@ -66,6 +67,8 @@
     "driver": "pwm"
   },
   "rgb_matrix": {
+    "driver": "ws2812",
+    "max_brightness": 255,
     "animations": {
       "alphas_mods": true,
       "gradient_up_down": true,
@@ -111,8 +114,6 @@
       "solid_splash": false,
       "solid_multisplash": false
     },
-    "driver": "ws2812",
-    "max_brightness": 200,
     "layout": [
       { "matrix": [1, 0], "x": 0, "y": 0, "flags": 4 },
       { "matrix": [1, 1], "x": 15, "y": 0, "flags": 4 },
